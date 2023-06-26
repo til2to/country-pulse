@@ -1,27 +1,40 @@
 import React from 'react';
 import { BsCaretLeftFill } from 'react-icons/bs';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const setTitle = () => {
+    let title = '';
     switch (pathname) {
       case '/':
-        return 'Continents';
-      case '/continent/africa ':
-        return 'Africa';
-      case '/contient/asia':
-        return 'Asia';
+        title = 'Continents';
+        break;
+      case '/continent/africa':
+        title = 'Africa';
+        break;
+      case '/continent/asia':
+        title = 'Asia';
+        break;
       case '/continent/europe':
-        return 'Europe';
-      case '/continent/north america':
-        return 'North America';
-      case '/continent/south america':
-        return 'South America';
+        title = 'Europe';
+        break;
+      case '/continent/north%20america':
+        title = 'North America';
+        break;
+      case '/continent/south%20america':
+        title = 'South America';
+        break;
+      case '/continent/oceania':
+        title = 'Oceania';
+        break;
       default:
-        return 'Continents';
+        title = 'Continents';
     }
+
+    return title;
   };
 
   return (
@@ -38,6 +51,7 @@ const Navbar = () => {
         <button
           type="button"
           className="p-2 rounded-full hover:bg-slate-800 transition-colors duration-300"
+          onClick={() => navigate(-1)}
         >
           <span>
             <BsCaretLeftFill />
