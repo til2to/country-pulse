@@ -16,8 +16,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Dashboard />} />
       {/* <Route path="/continent/:continent" element={<CountryDetails />} /> */}
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 function App() {
