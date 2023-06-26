@@ -47,16 +47,30 @@ const Navbar = () => {
           </Link>
         </div>
       </header>
-      <nav className="bg-slate-700 text-slate-100 px-4 py-2 flex justify-between lg:justify-around items-center">
-        <button
-          type="button"
-          className="p-2 rounded-full hover:bg-slate-800 transition-colors duration-300"
-          onClick={() => navigate(-1)}
-        >
-          <span>
-            <BsCaretLeftFill />
-          </span>
-        </button>
+      <nav
+        className={`${
+          pathname === '/'
+            ? 'justify-center'
+            : 'justify-between lg:justify-around items-center'
+        } bg-slate-700 text-slate-100 px-4 py-2 flex`}
+      >
+        {pathname !== '/' && (
+          <button
+            type="button"
+            className="p-2 rounded-full hover:bg-slate-800 transition-colors duration-300"
+            onClick={() => navigate(
+              `${
+                pathname.includes('/continent')
+                  ? '/'
+                  : '/continent/:continent'
+              }`,
+            )}
+          >
+            <span>
+              <BsCaretLeftFill />
+            </span>
+          </button>
+        )}
         <p className="text-xl">{setTitle()}</p>
       </nav>
     </>
