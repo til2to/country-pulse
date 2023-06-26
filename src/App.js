@@ -9,13 +9,13 @@ import {
 import RootLayout from './layouts/RootLayout';
 
 const Dashboard = lazy(() => import('./features/Dashboard'));
-const Details = lazy(() => import('./features/Details'));
+// const CountryDetails = lazy(() => import('./features/CountryDetails'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Dashboard />} />
-      <Route path="details" element={<Details />} />
+      {/* <Route path="/continent/:continent" element={<CountryDetails />} /> */}
     </Route>,
   ),
 );
