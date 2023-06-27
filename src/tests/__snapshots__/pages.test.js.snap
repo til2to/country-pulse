@@ -1,0 +1,488 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Tests should render Continent Details 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="bg-slate-700 text-slate-100 w-full h-[14rem] shadow pl-3 py-5 flex items-center justify-center gap-x-4"
+      >
+        <h3
+          class="text-2xl font-bold"
+        >
+          0
+           
+          Countries
+        </h3>
+      </div>
+      <div
+        class="p-2 my-2 lg:w-1/2 mx-auto"
+      >
+        <input
+          class="w-full p-3 rounded-md border shadow-md shadow-slate-300 text-lg focus:outline-none"
+          placeholder="Search for a country..."
+          type="search"
+          value=""
+        />
+      </div>
+      <section
+        class="px-8 py-5 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16"
+      >
+        <div
+          class="h-[18rem] flex justify-center items-center"
+        >
+          <p
+            class="text-center text-2xl"
+          >
+            Getting data...
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="bg-slate-700 text-slate-100 w-full h-[14rem] shadow pl-3 py-5 flex items-center justify-center gap-x-4"
+    >
+      <h3
+        class="text-2xl font-bold"
+      >
+        0
+         
+        Countries
+      </h3>
+    </div>
+    <div
+      class="p-2 my-2 lg:w-1/2 mx-auto"
+    >
+      <input
+        class="w-full p-3 rounded-md border shadow-md shadow-slate-300 text-lg focus:outline-none"
+        placeholder="Search for a country..."
+        type="search"
+        value=""
+      />
+    </div>
+    <section
+      class="px-8 py-5 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16"
+    >
+      <div
+        class="h-[18rem] flex justify-center items-center"
+      >
+        <p
+          class="text-center text-2xl"
+        >
+          Getting data...
+        </p>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`UI Tests should render Country Details 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-screen flex justify-center items-center"
+      >
+        <p
+          class="text-center text-2xl"
+        >
+          Getting data...
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-screen flex justify-center items-center"
+    >
+      <p
+        class="text-center text-2xl"
+      >
+        Getting data...
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`UI Tests should render Dashboard 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div>
+          <a
+            class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+            href="/continent/africa"
+          >
+            Africa
+            <div
+              class="w-[10rem]"
+            >
+              <img
+                alt="Africa"
+                class="object-contain"
+                src="africa.png"
+              />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+            href="/continent/asia"
+          >
+            Asia
+            <div
+              class="w-[10rem]"
+            >
+              <img
+                alt="Asia"
+                class="object-contain"
+                src="asia.png"
+              />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+            href="/continent/europe"
+          >
+            Europe
+            <div
+              class="w-[10rem]"
+            >
+              <img
+                alt="Europe"
+                class="object-contain"
+                src="europe.png"
+              />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+            href="/continent/north america"
+          >
+            North America
+            <div
+              class="w-[10rem]"
+            >
+              <img
+                alt="North America"
+                class="object-contain"
+                src="north-america.png"
+              />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+            href="/continent/south america"
+          >
+            South America
+            <div
+              class="w-[10rem]"
+            >
+              <img
+                alt="South America"
+                class="object-contain"
+                src="south-america.png"
+              />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+            href="/continent/oceania"
+          >
+            Oceania
+            <div
+              class="w-[10rem]"
+            >
+              <img
+                alt="Oceania"
+                class="object-contain"
+                src="oceania.png"
+              />
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      <div>
+        <a
+          class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+          href="/continent/africa"
+        >
+          Africa
+          <div
+            class="w-[10rem]"
+          >
+            <img
+              alt="Africa"
+              class="object-contain"
+              src="africa.png"
+            />
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+          href="/continent/asia"
+        >
+          Asia
+          <div
+            class="w-[10rem]"
+          >
+            <img
+              alt="Asia"
+              class="object-contain"
+              src="asia.png"
+            />
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+          href="/continent/europe"
+        >
+          Europe
+          <div
+            class="w-[10rem]"
+          >
+            <img
+              alt="Europe"
+              class="object-contain"
+              src="europe.png"
+            />
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+          href="/continent/north america"
+        >
+          North America
+          <div
+            class="w-[10rem]"
+          >
+            <img
+              alt="North America"
+              class="object-contain"
+              src="north-america.png"
+            />
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+          href="/continent/south america"
+        >
+          South America
+          <div
+            class="w-[10rem]"
+          >
+            <img
+              alt="South America"
+              class="object-contain"
+              src="south-america.png"
+            />
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          class="w-full h-[14rem] continent-card text-2xl font-semibold pl-3 py-5 rounded-md flex items-center justify-center gap-x-4"
+          href="/continent/oceania"
+        >
+          Oceania
+          <div
+            class="w-[10rem]"
+          >
+            <img
+              alt="Oceania"
+              class="object-contain"
+              src="oceania.png"
+            />
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

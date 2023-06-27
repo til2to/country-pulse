@@ -1,12 +1,13 @@
 import { lazy } from 'react';
 
+import { Provider } from 'react-redux';
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import { continentLoader, countryLoader } from './api/countries';
+import store from './api/store';
 import RootLayout from './layouts/RootLayout';
 
 const Dashboard = lazy(() => import('./features/Dashboard'));
@@ -20,19 +21,21 @@ const router = createBrowserRouter(
       <Route
         path="/continent/:continent"
         element={<ContinentDetails />}
-        loader={({ params }) => continentLoader(params.continent)}
       />
       <Route
-        path="/country/:country"
+        path="/country/:name"
         element={<CountryDetails />}
-        loader={({ params }) => countryLoader(params.country)}
       />
     </Route>,
   ),
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import africa from '../assets/africa.png';
 import asia from '../assets/asia.png';
 import europe from '../assets/europe.png';
@@ -41,9 +41,9 @@ const Dashboard = () => {
     },
   ];
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <section className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

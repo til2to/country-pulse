@@ -1,21 +1,15 @@
+import axios from 'axios';
+
 const BASE_URL = 'https://restcountries.com/v3.1';
 
 export const countryLoader = async (country) => {
-  const res = await fetch(`${BASE_URL}/name/${country}`);
+  const res = await axios.get(`${BASE_URL}/name/${country}`);
 
-  if (!res.ok) {
-    throw new Error('Something went wrong');
-  }
-
-  return res.json();
+  return res.data;
 };
 
 export const continentLoader = async (region) => {
-  const res = await fetch(`${BASE_URL}/region/${region}`);
+  const res = await axios.get(`${BASE_URL}/region/${region}`);
 
-  if (!res.ok) {
-    throw new Error('Something went wrong');
-  }
-
-  return res.json();
+  return res.data;
 };
