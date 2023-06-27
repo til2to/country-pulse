@@ -1,7 +1,7 @@
 const BASE_URL = 'https://restcountries.com/v3.1';
 
-export const countryLoader = async (cca3) => {
-  const res = await fetch(`${BASE_URL}/alpha/${cca3}`);
+export const countryLoader = async (country) => {
+  const res = await fetch(`${BASE_URL}/name/${country}`);
 
   if (!res.ok) {
     throw new Error('Something went wrong');
