@@ -1,58 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchCountries } from '../api/continentSlice';
-import africa from '../assets/africa.png';
-import asia from '../assets/asia.png';
-import europe from '../assets/europe.png';
-import northAmerica from '../assets/north-america.png';
-import oceania from '../assets/oceania.png';
-import southAmerica from '../assets/south-america.png';
 import CountryCard from '../components/CountryCard';
 import SearchFilter from '../components/SearchFilter';
 
 const ContinentDetails = () => {
   const { countries, loading, error } = useSelector((state) => state.continent);
-  const { pathname } = useLocation();
   const { continent } = useParams();
   const [query, setQuery] = useState('');
   const dispatch = useDispatch();
-
-  const setTitle = () => {
-    let title = '';
-    let image = '';
-
-    switch (pathname) {
-      case '/continent/africa':
-        title = 'Africa';
-        image = africa;
-        break;
-      case '/continent/asia':
-        title = 'Asia';
-        image = asia;
-        break;
-      case '/continent/europe':
-        title = 'Europe';
-        image = europe;
-        break;
-      case '/continent/north%20america':
-        title = 'North America';
-        image = northAmerica;
-        break;
-      case '/continent/south%20america':
-        title = 'South America';
-        image = southAmerica;
-        break;
-      case '/continent/oceania':
-        title = 'Oceania';
-        image = oceania;
-        break;
-      default:
-        return null;
-    }
-
-    return { title, image };
-  };
 
   const getContent = () => {
     let content = null;
@@ -92,12 +49,10 @@ const ContinentDetails = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    dispatch(fetchCountries(continent));
-  }, []);
+    if (countries.length === 0) {
+      dispatch(fetchCountries(continent));
+    }
+  }, [countries, dispatch, continent]);
 
   return (
     <>
@@ -107,13 +62,6 @@ const ContinentDetails = () => {
           {' '}
           Countries
         </h3>
-        <div className="w-[10rem]">
-          <img
-            src={setTitle().image}
-            alt={setTitle().name}
-            className="object-contain"
-          />
-        </div>
       </div>
 
       <SearchFilter query={query} setQuery={setQuery} />
