@@ -22,7 +22,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [COUNTRY PULSE] <a name="about-project"></a>
+# 📖 COUNTRY PULSE <a name="about-project"></a>
 
 **COUNTRY PULSE** is a web app that displays a list of countries from the REST Countries API.
 
@@ -48,10 +48,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Homepage - Dispalys all continents]**
-- **[Continent Page - Displays total number of countries and lists all countries in that continent]**
-- **[Search for a country - Search for a country on the continent page]**
-- **[Country Details - Displays details of a particular country]**
+- **Homepage - Dispalys all continents**
+- **Continent Page - Displays total number of countries and lists all countries in that continent**
+- **Search for a country - Search for a country on the continent page**
+- **Country Details - Displays details of a particular country**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +92,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd my-project
+  cd country-pulse
   npm install
 ```
 
@@ -131,7 +131,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Display data for every subregion]**
+- [ ] **Display data for every subregion**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
