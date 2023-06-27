@@ -82,7 +82,7 @@ const ContinentDetails = () => {
 
       <SearchFilter query={query} setQuery={setQuery} />
 
-      <section className="p-3">
+      <section className="px-8 py-5 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
         {filteredCountries.length === 0 ? (
           <p>No countries found</p>
         ) : (
