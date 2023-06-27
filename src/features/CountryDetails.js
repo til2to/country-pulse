@@ -23,7 +23,6 @@ const CountryDetails = () => {
         </div>
       );
     } else if (!loading && country) {
-      console.log(country);
       content = (
         <section className="h-[35rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-4 sm:mt-0">
           <div className="grid place-content-center px-4 mb-4 sm:mb-0">
