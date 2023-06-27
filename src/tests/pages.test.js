@@ -4,7 +4,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from '../api/store';
 import ContinentDetails from '../features/ContinentDetails';
+import CountryDetails from '../features/CountryDetails';
 import Dashboard from '../features/Dashboard';
+
 describe('UI Tests', () => {
   it('should render Dashboard', () => {
     const tree = render(
@@ -26,4 +28,14 @@ describe('UI Tests', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('should render Country Details', () => {
+    const tree = render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <CountryDetails />
+        </BrowserRouter>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
