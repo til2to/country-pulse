@@ -49,10 +49,8 @@ const ContinentDetails = () => {
   };
 
   useEffect(() => {
-    if (countries.length === 0) {
-      dispatch(fetchCountries(continent));
-    }
-  }, [countries, dispatch, continent]);
+    dispatch(fetchCountries(continent));
+  }, [dispatch, continent]);
 
   return (
     <>
