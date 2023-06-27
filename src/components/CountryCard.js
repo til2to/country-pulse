@@ -25,7 +25,7 @@ const CountryCard = ({ country }) => (
       </p>
       <div className="mt-6 mb-4">
         <Link
-          to={`/country/${country.cca3}`}
+          to={`/country/${country.name.common}`}
           className="border border-slate-700 rounded-md px-4 py-2"
         >
           See Details
