@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SearchFilter = ({ query, setQuery }) => (
-  <div className="p-2 my-2">
+  <div className="p-2 my-2 lg:w-1/2 mx-auto">
     <input
       type="search"
       value={query}
