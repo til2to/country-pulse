@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
-import { useLoaderData, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation, useParams } from 'react-router-dom';
+import { fetchCountries } from '../api/continentSlice';
 import africa from '../assets/africa.png';
 import asia from '../assets/asia.png';
 import europe from '../assets/europe.png';
@@ -10,9 +12,11 @@ import CountryCard from '../components/CountryCard';
 import SearchFilter from '../components/SearchFilter';
 
 const ContinentDetails = () => {
-  const countries = useLoaderData();
+  const { countries, loading, error } = useSelector((state) => state.continent);
   const { pathname } = useLocation();
+  const { continent } = useParams();
   const [query, setQuery] = useState('');
+  const dispatch = useDispatch();
 
   const setTitle = () => {
     let title = '';
@@ -50,17 +54,49 @@ const ContinentDetails = () => {
     return { title, image };
   };
 
-  const filteredCountries = countries.filter((country) => {
-    const nameMatchesQuery = country.name.common
-      .toLowerCase()
-      .includes(query.toLowerCase());
+  const getContent = () => {
+    let content = null;
 
-    const queryIsEmpty = query === '';
-    return queryIsEmpty || nameMatchesQuery;
-  });
+    if (loading) {
+      content = (
+        <div className="h-[18rem] flex justify-center items-center">
+          <p className="text-center text-2xl">Getting data...</p>
+        </div>
+      );
+    } else if (!loading) {
+      const filteredCountries = countries?.filter((country) => {
+        const nameMatchesQuery = country.name.common
+          .toLowerCase()
+          .includes(query.toLowerCase());
+
+        const queryIsEmpty = query === '';
+        return queryIsEmpty || nameMatchesQuery;
+      });
+
+      content = (
+        <>
+          {filteredCountries.length === 0 ? (
+            <p className="text-center text-2xl">No countries found</p>
+          ) : (
+            filteredCountries.map((country) => (
+              <CountryCard key={country.name.common} country={country} />
+            ))
+          )}
+        </>
+      );
+    } else if (error) {
+      content = <p>{error}</p>;
+    }
+
+    return content;
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    dispatch(fetchCountries(continent));
   }, []);
 
   return (
@@ -83,13 +119,7 @@ const ContinentDetails = () => {
       <SearchFilter query={query} setQuery={setQuery} />
 
       <section className="px-8 py-5 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
-        {filteredCountries.length === 0 ? (
-          <p>No countries found</p>
-        ) : (
-          filteredCountries.map((country) => (
-            <CountryCard key={country.name.common} country={country} />
-          ))
-        )}
+        {getContent()}
       </section>
     </>
   );
