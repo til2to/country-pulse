@@ -7,7 +7,7 @@ const RootLayout = () => (
     <Navbar />
 
     <main>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="h-screen text-3xl flex justify-center items-center">Loading...</div>}>
         <Outlet />
       </Suspense>
     </main>

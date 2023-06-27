@@ -6,32 +6,50 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
+  const getCountry = () => {
+    let country = '';
+    const splitPathname = pathname.split('/');
+    country = splitPathname[splitPathname.length - 1];
+    return country;
+  };
+
   const setTitle = () => {
     let title = '';
-    switch (pathname) {
-      case '/':
-        title = 'Continents';
-        break;
-      case '/continent/africa':
-        title = 'Africa';
-        break;
-      case '/continent/asia':
-        title = 'Asia';
-        break;
-      case '/continent/europe':
-        title = 'Europe';
-        break;
-      case '/continent/north%20america':
-        title = 'North America';
-        break;
-      case '/continent/south%20america':
-        title = 'South America';
-        break;
-      case '/continent/oceania':
-        title = 'Oceania';
-        break;
-      default:
-        title = 'Continents';
+    if (pathname.includes('/continent')) {
+      switch (pathname) {
+        case '/':
+          title = 'Continents';
+          break;
+        case '/continent/africa':
+          title = 'Africa';
+          break;
+        case '/continent/asia':
+          title = 'Asia';
+          break;
+        case '/continent/europe':
+          title = 'Europe';
+          break;
+        case '/continent/north%20america':
+          title = 'North America';
+          break;
+        case '/continent/south%20america':
+          title = 'South America';
+          break;
+        case '/continent/oceania':
+          title = 'Oceania';
+          break;
+        default:
+          title = 'Continents';
+      }
+    }
+
+    title = getCountry();
+    if (title.length > 20) {
+      title = `${title.substring(0, 30)}...`;
+    }
+
+    if (title.includes('%20')) {
+      title = title.replace(/%20/g, ' ');
     }
 
     return title;
@@ -58,13 +76,7 @@ const Navbar = () => {
           <button
             type="button"
             className="p-2 rounded-full hover:bg-slate-800 transition-colors duration-300"
-            onClick={() => navigate(
-              `${
-                pathname.includes('/continent')
-                  ? '/'
-                  : '/continent/:continent'
-              }`,
-            )}
+            onClick={() => navigate('/')}
           >
             <span>
               <BsCaretLeftFill />
