@@ -95,7 +95,7 @@ const CountryDetails = () => {
 
   useEffect(() => {
     dispatch(fetchCountry(name));
-  }, []);
+  }, [dispatch, name]);
 
   useEffect(() => {
     setCountry(data[0]);
