@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const CountryCard = ({ country }) => (
-  <div className="relative rounded-md overflow-hidden shadow-lg mb-10">
+  <div className="relative rounded-md overflow-hidden shadow-lg">
     <div className="">
       <img
         src={country.flags.png}
