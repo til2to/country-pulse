@@ -3,6 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from '../api/store';
+import ContinentDetails from '../features/ContinentDetails';
 import Dashboard from '../features/Dashboard';
 describe('UI Tests', () => {
   it('should render Dashboard', () => {
@@ -13,4 +14,16 @@ describe('UI Tests', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+
+  it('should render Continent Details', () => {
+    const tree = render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <ContinentDetails />
+        </BrowserRouter>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
 });
